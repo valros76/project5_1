@@ -1,31 +1,44 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="templates/css/style.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
-</head>
-<body>
-    <header>
-        <h1></h1>
-        <nav>
-            <ul>
-                <li>Inscription</li>
-            </ul>
-        </nav>
-    </header>
+<?php
+    $pageTitle = "Home";
+?>
 
-    <section>
+<?php ob_start();
+    echo '
+        <h1>Home</h1>
+    ';
+$mainHeader = ob_get_clean();?>
+
+<?php ob_start();
+    echo '
+        <ul>
+            <li><a href="?action=inscription">Inscription</a></li>
+        </ul>
+    ';
+$mainNav = ob_get_clean();?>
+
+<?php ob_start();
+    echo '
         <article>
             <h2>Article 1</h2>
-            <p>Contenu de l'article 1.</p>
+            <p>Contenu de l\'article 1.</p>
         </article>
-    </section>
+    ';
+$mainContent = ob_get_clean();?>
 
-    <footer>
+<?php ob_start();
+    echo '
+        <fieldset>
+            <legend>Menu</legend>
+            <ul>
+                <li><a href="?action=inscription">Inscription</a></li>
+            </ul>
+        </fieldset>
+    ';
+$mainAside = ob_get_clean();?>
+
+<?php ob_start();
+    echo '
         <p>Contenu du footer...</p>
-    </footer>
-</body>
-</html>
+    ';
+$mainFooter = ob_get_clean();?>
+<?php require('templates/gridTemplate.php'); ?>

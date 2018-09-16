@@ -11,6 +11,9 @@
     <div class="wrapper">
         <header class="main-header">
             <?= $mainHeader; ?>
+            <nav class="main-nav">
+                <?= $mainNav; ?>
+            </nav>
         </header>
 
         <section class="main-content">

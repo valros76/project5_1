@@ -12,9 +12,21 @@ $mainHeader = ob_get_clean();?>
     echo '
         <ul>
             <li><a href="?action=inscription">Inscription</a></li>
+            <li><a href="?action=connexion">Connexion</a></li>
         </ul>
     ';
 $mainNav = ob_get_clean();?>
+
+<?php ob_start();
+    echo '
+        <nav>
+            <ul>
+                <li><a href="?action=inscription">Inscription</a></li>
+                <li><a href="?action=connexion">Connexion</a></li>
+            </ul>
+        </nav>
+    ';
+$mainAsideLeft = ob_get_clean();?>
 
 <?php ob_start();
     echo '
@@ -27,14 +39,14 @@ $mainContent = ob_get_clean();?>
 
 <?php ob_start();
     echo '
-        <fieldset>
-            <legend>Menu</legend>
+        <nav>
             <ul>
                 <li><a href="?action=inscription">Inscription</a></li>
+                <li><a href="?action=connexion">Connexion</a></li>
             </ul>
-        </fieldset>
+        </nav>
     ';
-$mainAside = ob_get_clean();?>
+$mainAsideRight = ob_get_clean();?>
 
 <?php ob_start();
     echo '
